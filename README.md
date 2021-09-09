@@ -1,7 +1,7 @@
 # Heroku Minecraft Server ![Icon](server-icon.png)
-Runs a Minecraft Server in Heroku.
+Runs a Free Minecraft Server within Heroku.
 
-For the Buildpack, see [Here](https://github.com/Epicfisher/heroku-buildpack-minecraft)
+For the Heroku Minecraft Buildpack, see [Here.](https://github.com/Epicfisher/heroku-buildpack-minecraft)
 
 ## Features
 
