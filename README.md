@@ -13,7 +13,7 @@ For the Buildpack, see [Here.](https://github.com/Epicfisher/heroku-buildpack-mi
 
 ```
 * World Saving/Loading (Look into Dropbox?)
-* Permanent Server IP for ngrok Tunnel
+* Permanent Server IP for ngrok Tunnel (Dynu works; look into it's API!)
 ```
 
 ## Setup
