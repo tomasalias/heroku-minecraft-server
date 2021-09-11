@@ -6,6 +6,8 @@ For the Buildpack, see [Here.](https://github.com/Epicfisher/heroku-buildpack-mi
 ## Features
 
 ```
+* Supports Paper, Purpur, Spigot & More
+* Automatically Updates the Server with new Minecraft Versions
 * No Server Idling (Uses a Worker Process over Web)
 ```
 
