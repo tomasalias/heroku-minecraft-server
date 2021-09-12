@@ -64,7 +64,7 @@ Set the `NGROK_API_TOKEN` Config Variable to your Auth Token
 
 `heroku config:set NGROK_API_TOKEN="Your-Auth-Token"`
 
-## Dynu [OPTIONAL] (Creates a Permanent Joinable Address for your Server)
+### Dynu [OPTIONAL] (Creates a Permanent Joinable Address for your Server)
 
 Dynu DNS requires an Ngrok account
 
@@ -98,7 +98,7 @@ heroku config:set DYNU_CLIENT_ID="Your-Client-ID"
 heroku config:set DYNU_SECRET="Your-Secret"
 ```
 
-## Dropbox [OPTIONAL] (Free way to Permanently Save/Load your World)
+### Dropbox [OPTIONAL] (Free way to Permanently Save/Load your World)
 
 Create a new [Free Dropbox Account](https://www.dropbox.com/basic)
 
@@ -129,7 +129,7 @@ heroku config:set DROPBOX_APP_SECRET="Your-App-Secret"
 heroku config:set DROPBOX_ACCESS_TOKEN="Your-Refresh-Token"
 ```
 
-## Amazon S3 [OPTIONAL] (Paid Alternative to Permanently Save/Load your World)
+### Amazon S3 [OPTIONAL] (Paid Alternative to Permanently Save/Load your World)
 
 Create an [AWS Account](https://aws.amazon.com/) and an S3 Bucket
 
