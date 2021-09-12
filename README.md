@@ -6,18 +6,19 @@ For the Buildpack, see [Here.](https://github.com/Epicfisher/heroku-buildpack-mi
 ## Features
 
 ```
-* Supports Paper, Purpur, Spigot & More Servers
-* Automatically Updates the Server with new Minecraft Versions
-* World Saving/Loading with Dropbox or Amazon S3
 * No Server Idling (Uses a Worker Process over Web)
+* Supports Paper, Purpur, Spigot & Other Servers
+* Automatically Updates the Server with new Minecraft Versions
+* Creates a Permanent Server Address using Dynu DNS from Ngrok
+* World Saving/Loading with Dropbox or Amazon S3
 ```
 
 ## Missing Features
 
 ```
-* Permanent Server IP for ngrok Tunnel (Dynu works; look into it's API!)
+Empty List as of Now
 ```
 
 ## Setup
 
-Will write later
+Will write later!
