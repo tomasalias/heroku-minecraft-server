@@ -76,7 +76,9 @@ Create your Domain Name. This will be the IP others will Connect To to Join your
 
 Click `DNS Records` and Add a New DNS Record with the Following Information set. All other Fields can be Left as Default
 
-```Node Name = mcngrok```
+```
+Node Name = mcngrok
+```
 
 Click `Add DNS Record`
 
@@ -102,7 +104,7 @@ heroku config:set DYNU_SECRET="Your-Secret"
 
 Create a new [Free Dropbox Account](https://www.dropbox.com/basic)
 
-Download `Dropbox-Uploader` from Git onto your local Linux / Cygwin Windows Machine
+Download `Dropbox-Uploader` from Github onto your local Linux / Cygwin Windows Machine
 
 `curl "https://raw.githubusercontent.com/andreafabrizi/Dropbox-Uploader/master/dropbox_uploader.sh" -o dropbox_uploader.sh`
 
