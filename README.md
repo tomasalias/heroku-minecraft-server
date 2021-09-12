@@ -36,7 +36,7 @@ First, clone this Repo
 
 Next, create a Heroku app, and link your Clone to use Heroku as your Remote using the [CLI](https://toolbelt.heroku.com/)
 
-`heroku git:remote -a Your-App-Name>`
+`heroku git:remote -a <Your-App-Name>`
 
 You can now Freely Edit the Server Properties/Server Icon/OPs/Whitelist
 
@@ -46,7 +46,8 @@ You can set Additional Optional Config Variables
 
 (Keep in Mind these Variables are set with Optimised Default Values. Only change these if you know what you're doing)
 
-```heroku config:set MINECRAFT_VERSION="1.16.5" = Change the Minecraft Version your Server will Run. "latest" Downloadest Newest Available Version for your Server. Some Servers do not Support Latest Version Downloading
+```
+heroku config:set MINECRAFT_VERSION="1.16.5" = Change the Minecraft Version your Server will Run. "latest" Downloadest Newest Available Version for your Server. Some Servers do not Support Latest Version Downloading
 heroku config:set SERVER="paper" = Change the Server Software used. Vanilla Server not Available due to Poor Heroku Performance. Some Servers may only operate with More RAM. Server Options available:
 "purpur"
 "tuinity"
@@ -80,7 +81,8 @@ Click `DNS Records` and Add a New DNS Record with the Following Information set.
 Click `Add DNS Record`
 
 Now add another DNS Record and set the Following Information. All other Fields can be Left as Default
-```Node Name = _minecraft._tcp
+```
+Node Name = _minecraft._tcp
 Type = SRV
 Target = mcngrok.<The-Rest-Of-Your-Domain-Here>
 ```
@@ -91,7 +93,8 @@ Copy your [OAuth Client ID and Secret](https://www.dynu.com/ControlPanel/APICred
 
 Set the `DYNU_CLIENT_ID` and `DYNU_SECRET` Config Variables to your Client ID and Secret
 
-```heroku config:set DYNU_CLIENT_ID="Your-Client-ID"
+```
+heroku config:set DYNU_CLIENT_ID="Your-Client-ID"
 heroku config:set DYNU_SECRET="Your-Secret"
 ```
 
@@ -105,7 +108,8 @@ Download `Dropbox-Uploader` from Git onto your local Linux / Cygwin Windows Mach
 
 Next, Run the Bash File and Follow it's Instructions
 
-```chmod +x dropbox_uploader.sh
+```
+chmod +x dropbox_uploader.sh
 ./dropbox_uploader.sh -f Config.txt
 ```
 
@@ -119,7 +123,8 @@ OAUTH_REFRESH_TOKEN="Your-Refresh-Token"
 
 Set the `DROPBOX_APP_KEY`, `DROPBOX_APP_SECRET` and `DROPBOX_ACCESS_TOKEN` Config Variables to these Values appropriately
 
-```heroku config:set DROPBOX_APP_KEY="Your-App-Key"
+```
+heroku config:set DROPBOX_APP_KEY="Your-App-Key"
 heroku config:set DROPBOX_APP_SECRET="Your-App-Secret"
 heroku config:set DROPBOX_ACCESS_TOKEN="Your-Refresh-Token"
 ```
@@ -130,7 +135,8 @@ Create an [AWS Account](https://aws.amazon.com/) and an S3 Bucket
 
 Configure the Bucket and set your AWS Keys to the `AWS_BUCKET`, `AWS_ACCESS_KEY` and `AWS_SECRET_KEY` Config Variables
 
-```heroku config:set AWS_BUCKET="Your-Bucket-Name"
+```
+heroku config:set AWS_BUCKET="Your-Bucket-Name"
 heroku config:set AWS_ACCESS_KEY="Your-Access-Key"
 heroku config:set AWS_SECRET_KEY="Your-Secret-Key"
 ```
@@ -139,7 +145,8 @@ heroku config:set AWS_SECRET_KEY="Your-Secret-Key"
 
 Finally, Commit & Push the Repo to Heroku
 
-```git add .
+```
+git add .
 git commit -am "Heroku Initial Upload"
 git push heroku
 ```
@@ -156,7 +163,8 @@ If using Dynu, connect to your Created Domain Name (May Take up to 5 Minutes to 
 
 The Minecraft Server runs inside of a `screen` Session. You can use [Heroku Exec](https://devcenter.heroku.com/articles/heroku-exec) to Connect to your Server Console
 
-```heroku ps:exec
+```
+heroku ps:exec
 screen -r
 ```
 
