@@ -84,7 +84,7 @@ Create a New [Free Dynu Account](https://dynu.com)
 
 From the Control Panel, navigate to `DDNS Services`
 
-Create your Domain Name. This will be the IP others will Connect To to Join your Server
+Create your Domain Name from Option 1: One of Dynu's Free Shared Top Level Domains. This will be the IP others will Connect To to Join your Server
 
 Click `DNS Records` and Add a New DNS Record with the Following Information set. All other Fields can be Left as Default
 
@@ -114,7 +114,7 @@ heroku config:set DYNU_SECRET="Your-Secret"
 
 ### Dropbox [OPTIONAL] (Free way to Permanently Save/Load your World)
 
-Create a new [Free Dropbox Account](https://www.dropbox.com/basic)
+Create a New [Free Dropbox Account](https://www.dropbox.com/basic)
 
 Download `Dropbox-Uploader` from Github onto your local Linux / Cygwin Windows Machine
 
@@ -183,3 +183,9 @@ screen -r
 ```
 
 **WARNING** You are now connected to the Minecraft server. Use `Ctrl-A Ctrl-D` to Suspend the Screen Session. (If you hit `Ctrl-C` while in the Session, you'll Terminate the Minecraft Server)
+
+## Contributors
+
+This project contains work from the following contributors:
+
+[onpat](https://github.com/onpat) And [gamer4life1](https://github.com/gamer4life1) - For their Implementations of Dropbox Syncing
