@@ -188,4 +188,4 @@ screen -r
 
 This project contains work from the following contributors:
 
-[onpat](https://github.com/onpat) And [gamer4life1](https://github.com/gamer4life1) - For their Implementations of Dropbox Syncing
+- [onpat](https://github.com/onpat) And [gamer4life1](https://github.com/gamer4life1) - For their Implementations of Dropbox Syncing
