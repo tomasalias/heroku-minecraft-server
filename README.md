@@ -13,12 +13,6 @@ For the Buildpack, see [Here.](https://github.com/Epicfisher/heroku-buildpack-mi
 * World Saving/Loading with Dropbox or Amazon S3
 ```
 
-## Missing Features
-
-```
-Empty List as of Now
-```
-
 ## Notes
 
 ```
