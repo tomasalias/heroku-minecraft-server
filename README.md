@@ -34,28 +34,28 @@ heroku git:remote -a <Your-App-Name>
 
 You can now Freely Edit the Server Properties/Server Icon/OPs/Whitelist
 
-### Config Variables
+### Optional Config Variables
 
-#### Minecraft Config Variables
+#### Minecraft Optional Config Variables
 
 You can customise your Minecraft Server using Config Variables
 
 (Keep in Mind these Variables are set with Optimised Default Values. Only change these if you know what you're doing)
 
 ```
-heroku config:set MINECRAFT_VERSION = "1.16.5" = Change the Minecraft Version your Server will Run. "latest" Downloads Newest Available Version for your Server. Some Servers do not Support Latest Version Downloading
-heroku config:set SERVER="paper" = Change the Server Software used. Vanilla Server not Available due to Poor Heroku Performance. Some Servers may only operate with More RAM. "none" Downloads No Server. Server Options available:
+heroku config:set MINECRAFT_VERSION = "latest" = Change the Minecraft Version your Server will Run. "latest" Downloads Newest Available Version for your Server. Some Servers do not Support Latest Version Downloading
+heroku config:set SERVER="purpur" = Change the Server Software used. Vanilla Server not Available due to Poor Heroku Performance. Some Servers may only operate with More RAM. "none" Downloads No Server. Server Options available:
 "purpur"
 "tuinity"
 "paper"
 "spigot"
 "none"
-heroku config:set MEMORY="384m" = Change Memory Allocated to the Java Server, can be in (m)egabytes or (g)igabytes. Free Dyno can support up to 500m
+heroku config:set MEMORY="500m" = Change Memory Allocated to the Java Server, can be in (m)egabytes or (g)igabytes. Free Dyno can support up to 500m
 ```
 
-#### Additional Config Variables
+##### Additional Optional Config Variables
 
-You can also set Additional Optional Config Variables
+You can also set Additional Optional Config Variables. These are more situational in use
 
 ```
 heroku config:set SYNC_SAVE = "false" = Forcefully Disable World Saving through Dropbox/Amazon S3. Useful for Loading a Custom Word without Overwriting it
