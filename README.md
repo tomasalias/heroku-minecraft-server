@@ -186,5 +186,5 @@ screen -r
 
 This project contains work from the following contributors:
 
-- [jkutner](https://github.com/jkutner) - For their original Heroku Minecraft Server repo
-- [onpat](https://github.com/onpat) and [gamer4life1](https://github.com/gamer4life1) - For their Implementations of Dropbox Syncing
+- [jkutner](https://github.com/jkutner) - For their [original Heroku Minecraft Server repo](https://github.com/jkutner/heroku-buildpack-minecraft)
+- [onpat](https://github.com/onpat) and [gamer4life1](https://github.com/gamer4life1) - For their [Implementations of Dropbox Syncing](https://github.com/onpat/minecraftBuildpack)
