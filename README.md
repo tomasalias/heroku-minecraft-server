@@ -5,20 +5,16 @@ For the Buildpack, see [Here.](https://github.com/Epicfisher/heroku-buildpack-mi
 
 ## Features
 
-```
 * No Server Idling (Uses a Worker Process over Web)
 * Supports Paper, Purpur, Spigot & Other Servers
 * Automatically Updates the Server with new Minecraft Versions
-* Creates a Permanent Server Address using Dynu DNS from Ngrok
-* World Saving/Loading with Dropbox or Amazon S3
-```
+* Creates a Permanent Server Address using Dynu DNS
+* World Saving/Loading through Dropbox or Amazon S3
 
 ## Notes
 
-```
 * Ngrok Addresses are easily Guessable/Bruteforcable: If you don't want Random Griefers joining your server, invest in a Whitelist/Server Security Plugins
-* Store your World on Dropbox/Amazon S3 as a Compressed (.tar.gz) instead of Git, as using Git will dramatically increase your Upload Size to Heroku
-```
+* Store your World on Dropbox/Amazon S3 as a Compressed (.tar.gz) file instead of Git, as using Git will dramatically increase your Upload Size to Heroku
 
 ## Setup
 
@@ -26,11 +22,15 @@ For the Buildpack, see [Here.](https://github.com/Epicfisher/heroku-buildpack-mi
 
 First, clone this Repo
 
-`git clone https://github.com/Epicfisher/heroku-minecraft-server`
+```
+git clone https://github.com/Epicfisher/heroku-minecraft-server
+```
 
-Next, create a Heroku app, and link your Clone to use Heroku as your Remote using the [CLI](https://toolbelt.heroku.com/)
+Next, create a Heroku app, and then link your Repo to use Heroku as your Remote using the [CLI](https://toolbelt.heroku.com/)
 
-`heroku git:remote -a <Your-App-Name>`
+```
+heroku git:remote -a <Your-App-Name>
+```
 
 You can now Freely Edit the Server Properties/Server Icon/OPs/Whitelist
 
@@ -50,7 +50,7 @@ heroku config:set SERVER="paper" = Change the Server Software used. Vanilla Serv
 "paper"
 "spigot"
 "none"
-heroku config:set MEMORY="384m" = Change Memory Allocated to the Java Server, can be in "(m)egabytes or (g)igabytes. Free Dyno can support up to 500m"
+heroku config:set MEMORY="384m" = Change Memory Allocated to the Java Server, can be in (m)egabytes or (g)igabytes. Free Dyno can support up to 500m
 ```
 
 #### Additional Config Variables
@@ -58,7 +58,7 @@ heroku config:set MEMORY="384m" = Change Memory Allocated to the Java Server, ca
 You can also set Additional Optional Config Variables
 
 ```
-heroku config:set SYNC_SAVE = "false" = Forcefully Disable World Saving through Dropbox/Amazon S3. Useful for Loading a Custom Word without Overwriting
+heroku config:set SYNC_SAVE = "false" = Forcefully Disable World Saving through Dropbox/Amazon S3. Useful for Loading a Custom Word without Overwriting it
 heroku config:set SYNC_LOAD = "false" = Forcefully Disable World Loading through Dropbox/Amazon S3. Useful for Forcefully Saving over an Old World
 ```
 
@@ -68,17 +68,19 @@ Create a New [Free Ngrok Account](https://ngrok.com/) and copy your Auth Token
 
 Set the `NGROK_API_TOKEN` Config Variable to your Auth Token
 
-`heroku config:set NGROK_API_TOKEN="Your-Auth-Token"`
+```
+heroku config:set NGROK_API_TOKEN="Your-Auth-Token"
+```
 
 ### Dynu [OPTIONAL] (Creates a Permanent Joinable Address for your Server)
 
-Dynu DNS requires an Ngrok account
+**NOTE: Dynu DNS requires an Ngrok account**
 
 Create a New [Free Dynu Account](https://dynu.com)
 
 From the Control Panel, navigate to `DDNS Services`
 
-Create your Domain Name from Option 1: One of Dynu's Free Shared Top Level Domains. This will be the IP others will Connect To to Join your Server
+Create your Domain Name from `Option 1: One of Dynu's Free Shared Top Level Domains`. This will be the IP others will Connect To to Join your Server
 
 Click `DNS Records` and Add a New DNS Record with the Following Information set. All other Fields can be Left as Default
 
@@ -110,9 +112,11 @@ heroku config:set DYNU_SECRET="Your-Secret"
 
 Create a New [Free Dropbox Account](https://www.dropbox.com/basic)
 
-Download `Dropbox-Uploader` from Github onto your local Linux / Cygwin Windows Machine
+Download `Dropbox-Uploader` from Github onto your local Linux / Cygwin Windows Machine:
 
-`curl "https://raw.githubusercontent.com/andreafabrizi/Dropbox-Uploader/master/dropbox_uploader.sh" -o dropbox_uploader.sh`
+```
+curl "https://raw.githubusercontent.com/andreafabrizi/Dropbox-Uploader/master/dropbox_uploader.sh" -o dropbox_uploader.sh
+```
 
 Next, Run the Bash File and Follow it's Instructions
 
@@ -163,9 +167,9 @@ git push heroku
 
 After Enabling your Worker/Web Dyno in the Resources tab, your Server should Start
 
-If using Ngrok, your Server's IP Address can be found at `https://dashboard.ngrok.com/endpoints/status` 
+If using **Ngrok**, your Server's IP Address will be found at `https://dashboard.ngrok.com/endpoints/status` 
 
-If using Dynu, connect to your Created Domain Name (May Take up to 5 Minutes to Update)
+If using **Dynu**, your Server's IP Address will be your Created Domain Name (May Take up to 5 Minutes to Update)
 
 ### Connect to your Server Console
 
@@ -182,4 +186,5 @@ screen -r
 
 This project contains work from the following contributors:
 
-- [onpat](https://github.com/onpat) And [gamer4life1](https://github.com/gamer4life1) - For their Implementations of Dropbox Syncing
+- [jkutner](https://github.com/jkutner) - For their original Heroku Minecraft Server repo
+- [onpat](https://github.com/onpat) and [gamer4life1](https://github.com/gamer4life1) - For their Implementations of Dropbox Syncing
