@@ -7,6 +7,7 @@ For the Buildpack, see [Here.](https://github.com/Epicfisher/heroku-buildpack-mi
 
 * No Server Idling (Uses a Worker Process over Web)
 * Supports Paper, Purpur, Spigot & Other Servers
+* Compatible with Plugins/Mods (For Mods, a Custom Modded Server JAR is Needed)
 * Automatically Updates the Server with new Minecraft Versions
 * Creates a Permanent Server Address using Dynu DNS
 * World Saving/Loading through Dropbox or Amazon S3
@@ -15,6 +16,7 @@ For the Buildpack, see [Here.](https://github.com/Epicfisher/heroku-buildpack-mi
 
 * Ngrok Addresses are easily Guessable/Bruteforcable: If you don't want Random Griefers joining your server, invest in a Whitelist/Server Security Plugins
 * Store your World on Dropbox/Amazon S3 as a Compressed (.tar.gz) file instead of Git, as using Git will dramatically increase your Upload Size to Heroku
+* Plugins can't auto-update with the Server: If you use a lot of them, consider setting your `MINECRAFT_VERSION` to an older Version of Minecraft, until you can Manually Update your Plugins/Server to a newer Version
 
 ## Setup
 
