@@ -143,7 +143,7 @@ heroku config:set DROPBOX_APP_SECRET="Your-App-Secret"
 heroku config:set DROPBOX_ACCESS_TOKEN="Your-Refresh-Token"
 ```
 
-### Amazon S3 [OPTIONAL] (Paid Alternative to Permanently Save/Load your World)
+<details><summary><b>Amazon S3 [OPTIONAL] (Paid Alternative to Permanently Save/Load your World)</b></summary>
 
 Create an [AWS Account](https://aws.amazon.com/) and an S3 Bucket
 
@@ -154,6 +154,7 @@ heroku config:set AWS_BUCKET="Your-Bucket-Name"
 heroku config:set AWS_ACCESS_KEY="Your-Access-Key"
 heroku config:set AWS_SECRET_KEY="Your-Secret-Key"
 ```
+</details>
 
 ### Upload the Server
 
