@@ -7,6 +7,7 @@ For the Buildpack, see [Here.](https://github.com/Epicfisher/heroku-buildpack-mi
 
 * No Server Idling (Uses a Worker Process over Web)
 * Supports Paper, Purpur, Spigot & Other Servers
+* Compatible with Plugins/Mods (For Mods, a Custom Modded Server JAR is Needed)
 * Automatically Updates the Server with new Minecraft Versions
 * Creates a Permanent Server Address using Dynu DNS
 * World Saving/Loading through Dropbox or Amazon S3
@@ -15,6 +16,7 @@ For the Buildpack, see [Here.](https://github.com/Epicfisher/heroku-buildpack-mi
 
 * Ngrok Addresses are easily Guessable/Bruteforcable: If you don't want Random Griefers joining your server, invest in a Whitelist/Server Security Plugins
 * Store your World on Dropbox/Amazon S3 as a Compressed (.tar.gz) file instead of Git, as using Git will dramatically increase your Upload Size to Heroku
+* Plugins can't auto-update with the Server: If you use a lot of them, consider setting your `MINECRAFT_VERSION` to an older Version of Minecraft, until you can Manually Update your Plugins/Server to a newer Version
 
 ## Setup
 
@@ -34,28 +36,28 @@ heroku git:remote -a <Your-App-Name>
 
 You can now Freely Edit the Server Properties/Server Icon/OPs/Whitelist
 
-### Config Variables
+### Optional Config Variables
 
-#### Minecraft Config Variables
+#### Minecraft Optional Config Variables
 
 You can customise your Minecraft Server using Config Variables
 
 (Keep in Mind these Variables are set with Optimised Default Values. Only change these if you know what you're doing)
 
 ```
-heroku config:set MINECRAFT_VERSION = "1.16.5" = Change the Minecraft Version your Server will Run. "latest" Downloads Newest Available Version for your Server. Some Servers do not Support Latest Version Downloading
-heroku config:set SERVER="paper" = Change the Server Software used. Vanilla Server not Available due to Poor Heroku Performance. Some Servers may only operate with More RAM. "none" Downloads No Server. Server Options available:
+heroku config:set MINECRAFT_VERSION = "latest" = Change the Minecraft Version your Server will Run. "latest" Downloads Newest Available Version for your Server. Some Servers do not Support Latest Version Downloading
+heroku config:set SERVER="purpur" = Change the Server Software used. Vanilla Server not Available due to Poor Heroku Performance. Some Servers may only operate with More RAM. "none" Downloads No Server. Server Options available:
 "purpur"
 "tuinity"
 "paper"
 "spigot"
 "none"
-heroku config:set MEMORY="384m" = Change Memory Allocated to the Java Server, can be in (m)egabytes or (g)igabytes. Free Dyno can support up to 500m
+heroku config:set MEMORY="500m" = Change Memory Allocated to the Java Server, can be in (m)egabytes or (g)igabytes. Free Dyno can support up to 500m
 ```
 
-#### Additional Config Variables
+##### Additional Optional Config Variables
 
-You can also set Additional Optional Config Variables
+You can also set Additional Optional Config Variables. These are more situational in use
 
 ```
 heroku config:set SYNC_SAVE = "false" = Forcefully Disable World Saving through Dropbox/Amazon S3. Useful for Loading a Custom Word without Overwriting it
@@ -141,7 +143,7 @@ heroku config:set DROPBOX_APP_SECRET="Your-App-Secret"
 heroku config:set DROPBOX_ACCESS_TOKEN="Your-Refresh-Token"
 ```
 
-### Amazon S3 [OPTIONAL] (Paid Alternative to Permanently Save/Load your World)
+<details><summary><b>Amazon S3 [OPTIONAL] (Paid Alternative to Permanently Save/Load your World)</b></summary>
 
 Create an [AWS Account](https://aws.amazon.com/) and an S3 Bucket
 
@@ -152,6 +154,7 @@ heroku config:set AWS_BUCKET="Your-Bucket-Name"
 heroku config:set AWS_ACCESS_KEY="Your-Access-Key"
 heroku config:set AWS_SECRET_KEY="Your-Secret-Key"
 ```
+</details>
 
 ### Upload the Server
 
@@ -186,5 +189,5 @@ screen -r
 
 This project contains work from the following contributors:
 
-- [jkutner](https://github.com/jkutner) - For their original Heroku Minecraft Server repo
-- [onpat](https://github.com/onpat) and [gamer4life1](https://github.com/gamer4life1) - For their Implementations of Dropbox Syncing
+- [jkutner](https://github.com/jkutner) - For their [original Heroku Minecraft Server repo](https://github.com/jkutner/heroku-buildpack-minecraft)
+- [onpat](https://github.com/onpat) and [gamer4life1](https://github.com/gamer4life1) - For their [Implementations of Dropbox Syncing](https://github.com/onpat/minecraftBuildpack)
